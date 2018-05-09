@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'CoutureBold';
+    src: url('fonts/CoutureBold.eot');
+    src: url('fonts/CoutureBold.eot') format('embedded-opentype'),
+         url('fonts/CoutureBold.woff2') format('woff2'),
+         url('fonts/CoutureBold.woff') format('woff'),
+         url('fonts/CoutureBold.ttf') format('truetype'),
+         url('fonts/CoutureBold.svg#CoutureBold') format('svg');
+}

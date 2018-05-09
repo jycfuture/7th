@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+	<{include file='part-head.htm'}>
+</head>
+<body>
+<{include file='part-header.htm'}>
+<section class="conntainer bg-1 bg-img pt30 pb140">
+	<div class="wrapper">
+		<div class="conbox">
+			<div class="intitle fs-24 ls-20 color-white clearfix">合作伙伴</div>
+			<div class="partner clearfix pt75 pb55 pr95 pl95">
+				<div class="partnerart fs-13 ta-c lh-24em color-white pb50">
+				<{$infoclass.content}>
+				</div>
+				<div class="partnerlist pl40">
+					<nav class="scroll-bd">
+						<ul class="clearfix ta-c grow">
+							<{foreach from=$partner item=item}>
+							<li class="col12-md-3"><img src="<{$UPLOAD_PATH}><{$item.imageUrl}>"></li>
+							<{/foreach}>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<{include file='part-footer.htm'}>
+</body>
+</html>

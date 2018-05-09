@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Yantramanav';
+    src: url('fonts/Yantramanav.eot');
+    src: url('fonts/Yantramanav.eot') format('embedded-opentype'),
+         url('fonts/Yantramanav.woff2') format('woff2'),
+         url('fonts/Yantramanav.woff') format('woff'),
+         url('fonts/Yantramanav.ttf') format('truetype'),
+         url('fonts/Yantramanav.svg#Yantramanav') format('svg');
+}

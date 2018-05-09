@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+	<{include file='part-head.htm'}>
+</head>
+<body>
+<{include file='part-header.htm'}>
+<section class="conntainer bg-1 bg-img pt40 pb250">
+	<div class="wrapper">
+		<div class="conbox">
+			<div class="intitle fs-24 ls-20 color-white clearfix">公司介绍</div>
+			<div class="about clearfix pt65 pb65 pr55 pl65">
+				<div class="aboutart fl fs-13 lh-22em color-white wp50">
+					<article class="scroll-bd">
+					<{$infoclass.content}>
+					</article>
+				</div>
+				<div class="imgbox wp50 fr pl40">
+					<img src="<{$UPLOAD_PATH}><{$infoclass.imageUrl}>">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<{include file='part-footer.htm'}>
+</body>
+</html>

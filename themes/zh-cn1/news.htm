@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+	<{include file='part-head.htm'}>
+</head>
+<body>
+<{include file='part-header.htm'}>
+<section class="inbanner bg-img" style="background-image: url(<{$SKIN_PATH}>dist/images/inbanner1.jpg)">
+</section>
+<section class="news container">
+	<div class="conbg"></div>
+	<div class="wrapper">
+		<div class="inTitle color-9 fs-18"><b>公告通知</b></div>
+		<nav class="newslist color-11">
+			<ul>
+				<{foreach from=$news item=item}>
+				<li>
+					<i class="icon"></i>
+					<a href="<{$http_root_www}>news/<{$item.id}>" class="clearfix">
+						<span class="fl"><{$item.title}></span>
+						<time class="fr"><{$item.publishedDate}></time>
+					</a>
+				</li>
+				<{/foreach}>
+			</ul>
+		</nav>
+		<section class="page">
+			<!--<div class="pageinfo ta-r color-11">共2页，当前为<span class="color-9">第1页</span>，每页10条</div>-->
+			<!--<div class="page-pagination ta-c fs-12 ta-c">-->
+				<!--<a href="" class="first">首页</a>-->
+				<!--<a href="">&lt;</a>-->
+				<!--<a href="">1</a>-->
+				<!--<a href="">2</a>-->
+				<!--<a href="">&gt;</a>-->
+				<!--<a href="" class="last">尾页</a>-->
+			<!--</div>-->
+			<{$page.pageStr}>
+		</section>
+	</div>
+</section>
+<{include file='part-footperson.htm'}>
+<{include file='part-footer.htm'}>
+</body>
+</html>

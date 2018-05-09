@@ -1,0 +1,35 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+RewriteRule ^contact.php$ index.php?ctl=contact [NC]
+
+#zh-cn
+RewriteRule ^/?$ index.php?lang=zh-cn&%{QUERY_STRING} [NC]
+RewriteRule ^verifycode.gif$ index.php?lang=zh-cn&con=admin&ctl=verifycode&%{QUERY_STRING} [NC]
+
+#timer
+RewriteRule ^timer/([^?.]+)/?$ index.php?lang=en&ctl=timer&act=$1&%{QUERY_STRING} [NC]
+RewriteRule ^inquire.php$ index.php?ctl=inquire [NC]
+
+#paypal
+RewriteRule ^payment/paypal/([^\/?.]+)?/?$ index.php?lang=en&ctl=payment/paypal&act=$1&%{QUERY_STRING} [NC]
+
+#oauth connect
+RewriteRule ^oauth_connect/([^?.]+)/?$ index.php?lang=en&ctl=oauth_connect&act=$1&%{QUERY_STRING} [NC]
+
+#qrcode
+RewriteRule ^qrcode.php?$ qrcode.php?lang=en&%{QUERY_STRING} [NC]
+
+#member
+RewriteRule ^member/?$ index.php?ctl=member&%{QUERY_STRING} [NC]
+RewriteRule ^member/([^?.]+)/?$ index.php?lang=en&ctl=member&act=$1&%{QUERY_STRING} [NC]
+
+RewriteRule ^([^?.]+)/([0-9]+)$ index.php?lang=zh-cn&ctl=display&id=$2&%{QUERY_STRING} [NC]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^?.]+)$ index.php?lang=zh-cn&ctl=info&alias=$1&%{QUERY_STRING} [NC]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+
+</IfModule>

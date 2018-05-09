@@ -1,0 +1,33 @@
+<link href="images/galleria.twelve.css" rel="stylesheet" />
+<script type="text/javascript" src="galleria-1.2.7.min.js"></script>
+<script type="text/javascript" src="galleria.twelve.min.js"></script>
+<script type="text/javascript">
+jQuery(function(){
+	profileImages = jQuery('.profileImages');
+	if(profileImages.length)
+	{
+		// Profile images
+		profileImages.galleria({
+			width:285,
+			height:365,
+			showCounter: false,
+			//thumbnails: false,
+			autoplay: true,
+			fullscreenCrop: false,
+			thumbCrop: true,
+			transitionSpeed: 2000,
+			transition: 'fade',
+			_showFullscreen: false,
+			// Toggles the fullscreen button
+			//_showFullscreen: false,
+			// Toggles the lightbox button
+			//_showPopout: false,
+			_showProgress: false
+		});
+	}
+});
+</script>
+
+<div class="profileImages">
+	<a rel="大图或小图，具体不清楚" href="大图或小图，具体不清楚"><img class="profileImg" src="大图或小图，具体不清楚" title="图片标题"></a>
+</div>

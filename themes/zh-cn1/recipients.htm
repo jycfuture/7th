@@ -1,0 +1,299 @@
+<!doctype html>
+<html>
+<head>
+<title>收件人管理</title>
+<meta content="" name="keywords">
+<meta content="" name="description">
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<meta content="email=no" name="format-detection" />
+
+<link href="favicon.ico" mce_href="/favicon.ico" rel="bookmark" type="image/x-icon" />
+<link href="favicon.ico" mce_href="/favicon.ico" rel="icon" type="image/x-icon" />
+<link href="favicon.ico" mce_href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="dist/font-awesome-4.6.3/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="dist/fonts/fonts.css" />
+<link rel="stylesheet" type="text/css" href="dist/font-en.min.css" />
+<link rel="stylesheet" type="text/css" href="dist/plugin.min.css" />
+<link rel="stylesheet" type="text/css" href="dist/layout.min.css" />
+<link rel="stylesheet" type="text/css" href="dist/desktop.min.css" />
+<link rel="stylesheet" type="text/css" href="dist/responsive.min.css" />
+<script type="text/javascript" src="dist/jquery-1.10.2.min.js"></script>
+<!--[if lt IE 9]><script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script><![endif]-->
+</head>
+<body>
+<header class="header">
+	<div class="topBar bg-color1 clearfix">
+		<div class="left fl color-white fs-16">
+			<div class="fl email mr60"><i class="icon"></i><span>sales@arkexpress.com.au</span></div>
+			<div class="fl phone"><i class="icon"></i><span>全澳统一客服热线: 1300 275 (ARK) 999</span></div>
+		</div>
+		<div class="right fr color-white fs-20">
+			<div class="time fl color-white fs-16 mr60">
+				<span class="time1 fl pl35 mr25">THU 05:05</span>
+				<span class="time2 fl pl35">THU 02:05 </span>
+			</div>
+			<div class="btns fl mr30 pt15">
+				<a href="login.html" class="btn w100 color-white fl fs-12 ta-c btn-style1 mr20">登录 </a>
+				<a href="regist.html" class="btn w100 color-white fl fs-12 ta-c btn-style2">注册</a>
+
+			</div>
+			<div class="price mt15 fl ta-c w195 color-white fs-12">1 AUD = 5.2 CNY</div>
+		</div>
+	</div>
+	<div class="topcon">
+		<div class="wrapper clearfix">
+			<a class="logo fl" href="index.html"><img src="dist/images/logo.png"></a>
+			<ul class="fr ta-c fs-16 nav">
+				<li class="fl"><a href="index.html">首页</a></li>
+				<li class="fl"><a href="service.html">服务指南</a></li>
+				<li class="fl"><a href="news.html">公告通知</a></li>
+				<li class="fl active"><a href="help.html">自助平台</a></li>
+				<li class="fl"><a href="find.html">网点查询</a></li>
+				<li class="fl"><a href="partner.html">加盟投资</a></li>
+				<li class="fl"><a href="city.html">城市分站</a></li>
+				<li class="fl"><a href="about.html">关于我们</a></li>
+			</ul>
+			<a href="javascript:;" class="btn-style3 w220 ta-c color-white fs-20 fl"><span>在线下单</span></a>
+		</div>
+	</div>
+</header>
+<section class="orderlist container">
+	<div class="wrapper">
+		<div class="orderTitle fs-16 clearfix">
+			<div class="breadnav color-9 fl fs-16"><span>个人中心</span><i class="fa fa-angle-double-right fs-18 color-9"></i>收件人管理</div>
+			<div class="name color-9 fs-18 fr"><span class="arrow-icon mr10"><i></i><i></i><i></i></span><b>收件人</b></div>
+		</div>
+		<div class="clearfix orderlayout">
+			<nav class="Leftnav">
+				<ul class="color-11">
+					<li><a href="orderlist.html"><i class="icon"></i>订单列表</a></li>
+					<li><a href=""><i class="icon"></i>在线下单</a></li>
+					<li><a href="sender.html"><i class="icon"></i>寄件人管理</a></li>
+					<li class="active"><a href="recipients.html"><i class="icon"></i>收件人管理</a></li>
+					<li><a href=""><i class="icon"></i>包裹追踪</a></li>
+					<li><a href=""><i class="icon"></i>个人资料</a></li>
+					<li><a href="upload.html"><i class="icon"></i>上传证件</a></li>
+					<li><a href=""><i class="icon"></i>上传证件核查</a></li>
+					<li><a href=""><i class="icon"></i>修改密码</a></li>
+					<li><a href=""><i class="icon"></i>安全退出</a></li>
+				</ul>
+			</nav>
+			<div class="orderbox">
+				<div class="sendsearch clearfix">
+					<div class="fl inputbox"><span class="bg-color1"></span><input type="text" class="input-style2 color-11" placeholder="输入姓名、电话或地址查询"></div>	
+					<button class="btn-style7 color-white ta-c fs-16"><span class="bg-color1-1"></span>查询</button>
+				</div>
+				<div class="addbtn">
+					<a href="javascript:;" class="btn-style6 ta-c color-white fs-12"><span class="pr10 fs-16">＋</span>批量导入收件人</a>
+					<a href="javascript:;" class="btn-style6 ta-c color-white fs-12"><span class="pr10 fs-16">＋</span>添加新地址</a>
+				</div>
+				<div class="table-box2">
+					<div class="table table-3 ta-c color-11 fs-12">
+						<div class="thead">
+							<div class="tr">
+								<div class="th ta-l">姓名</div>
+								<div class="th">联系电话</div>
+								<div class="th">身份证号码</div>
+								<div class="th">地址</div>
+								<div class="th">操作</div>
+								<div class="th">上传身份证</div>
+								<div class="th"></div>
+							</div>
+						</div>
+						<dib class="tbody">
+							<div class="tr">
+								<div class="td ta-l">南小南</div>
+								<div class="td">131222000022</div>
+								<div class="td">H23423423234235222</div>
+								<div class="td ta-l">河南省安阳市文峰区技术园区黄浦路538号402号</div>
+								<div class="td"><a href="">修改</a><em>|</em><a href="">删除</a></div>
+								<div class="td"><span class="fa fa-check-circle"></span></div>
+								<div class="td"><a href="" class="deliverbtn btn-style8 fs-12 color-white">发货给TA</a></div>
+							</div>
+							<div class="tr">
+								<div class="td ta-c">南小南</div>
+								<div class="td">131222000022</div>
+								<div class="td">H23423423234235222</div>
+								<div class="td ta-l">河南省安阳市文峰区技术园区黄浦路538号402号</div>
+								<div class="td"><a href="">修改</a><em>|</em><a href="">删除</a></div>
+								<div class="td"><div class="submitbox ta-c color-white"><input type="file"><a href="upload.html" class="submitbtn">点击上传</a></div></div>
+								<div class="td"><a href="" class="deliverbtn btn-style8 fs-12 color-white">发货给TA</a></div>
+							</div>
+							<div class="tr">
+								<div class="td ta-l">南小南</div>
+								<div class="td">131222000022</div>
+								<div class="td">H23423423234235222</div>
+								<div class="td ta-l">河南省安阳市文峰区技术园区黄浦路538号402号</div>
+								<div class="td"><a href="">修改</a><em>|</em><a href="">删除</a></div>
+								<div class="td"><span class="fa fa-check-circle"></span></div>
+								<div class="td"><a href="" class="deliverbtn btn-style8 fs-12 color-white">发货给TA</a></div>
+							</div>
+							<div class="tr">
+								<div class="td ta-l">南小南</div>
+								<div class="td">131222000022</div>
+								<div class="td">H23423423234235222</div>
+								<div class="td ta-l">河南省安阳市文峰区技术园区黄浦路538号402号</div>
+								<div class="td"><a href="">修改</a><em>|</em><a href="">删除</a></div>
+								<div class="td"><span class="fa fa-check-circle"></span></div>
+								<div class="td"><a href="" class="deliverbtn btn-style8 fs-12 color-white">发货给TA</a></div>
+							</div>
+							<div class="tr">
+								<div class="td ta-l">南小南</div>
+								<div class="td">131222000022</div>
+								<div class="td">H23423423234235222</div>
+								<div class="td ta-l">河南省安阳市文峰区技术园区黄浦路538号402号</div>
+								<div class="td"><a href="">修改</a><em>|</em><a href="">删除</a></div>
+								<div class="td"><span class="fa fa-check-circle"></span></div>
+								<div class="td"><a href="" class="deliverbtn btn-style8 fs-12 color-white">发货给TA</a></div>
+							</div>
+							<div class="tr">
+								<div class="td ta-c">南小南</div>
+								<div class="td">131222000022</div>
+								<div class="td">H23423423234235222</div>
+								<div class="td ta-l">河南省安阳市文峰区技术园区黄浦路538号402号</div>
+								<div class="td"><a href="">修改</a><em>|</em><a href="">删除</a></div>
+								<div class="td"><div class="submitbox ta-c color-white"><input type="file"><a href="upload.html" class="submitbtn">点击上传</a></div></div>
+								<div class="td"><a href="" class="deliverbtn btn-style8 fs-12 color-white">发货给TA</a></div>
+							</div>
+							<div class="tr">
+								<div class="td ta-l">南小南</div>
+								<div class="td">131222000022</div>
+								<div class="td">H23423423234235222</div>
+								<div class="td ta-l">河南省安阳市文峰区技术园区黄浦路538号402号</div>
+								<div class="td"><a href="">修改</a><em>|</em><a href="">删除</a></div>
+								<div class="td"><span class="fa fa-check-circle"></span></div>
+								<div class="td"><a href="" class="deliverbtn btn-style8 fs-12 color-white">发货给TA</a></div>
+							</div>
+							<div class="tr">
+								<div class="td ta-c">南小南</div>
+								<div class="td">131222000022</div>
+								<div class="td">H23423423234235222</div>
+								<div class="td ta-l">河南省安阳市文峰区技术园区黄浦路538号402号</div>
+								<div class="td"><a href="">修改</a><em>|</em><a href="">删除</a></div>
+								<div class="td"><div class="submitbox ta-c color-white"><input type="file"><a href="upload.html" class="submitbtn">点击上传</a></div></div>
+								<div class="td"><a href="" class="deliverbtn btn-style8 fs-12 color-white">发货给TA</a></div>
+							</div>
+							<div class="tr">
+								<div class="td ta-l">南小南</div>
+								<div class="td">131222000022</div>
+								<div class="td">H23423423234235222</div>
+								<div class="td ta-l">河南省安阳市文峰区技术园区黄浦路538号402号</div>
+								<div class="td"><a href="">修改</a><em>|</em><a href="">删除</a></div>
+								<div class="td"><span class="fa fa-check-circle"></span></div>
+								<div class="td"><a href="" class="deliverbtn btn-style8 fs-12 color-white">发货给TA</a></div>
+							</div>
+							<div class="tr">
+								<div class="td ta-l">南小南</div>
+								<div class="td">131222000022</div>
+								<div class="td">H23423423234235222</div>
+								<div class="td ta-l">河南省安阳市文峰区技术园区黄浦路538号402号</div>
+								<div class="td"><a href="">修改</a><em>|</em><a href="">删除</a></div>
+								<div class="td"><span class="fa fa-check-circle"></span></div>
+								<div class="td"><a href="" class="deliverbtn btn-style8 fs-12 color-white">发货给TA</a></div>
+							</div>
+							<!-- <div class="tr">
+								<div class="td ta-c"><input type="text" name=""></div>
+								<div class="td"><input type="text" name=""></div>
+								<div class="td"><input type="text" name=""></div>
+								<div class="td ta-l"><input type="text" name=""></div>
+								<div class="td"><a href="">修改</a><em>|</em><a href="">删除</a></div>
+								<div class="td"><div class="submitbox ta-c color-white"><input type="file"><a href="upload.html" class="submitbtn">点击上传</a></div></div>
+								<div class="td"><a href="" class="deliverbtn btn-style8 fs-12 color-white">发货给TA</a></div>
+							</div> -->
+						</dib>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<div class="footperson">
+    <div class="Htip">
+        <div class="wrapper">
+            <div class="clearfix">
+                <div class="person"></div>
+                <dl class="fl color-white fs-15">
+                    <dd class="fl"><b>快速运输<br>高效清关</b></dd>
+                    <dd class="fl"><b>状态更新<br>精准追踪</b></dd>
+                    <dd class="fl"><b>安全妥投<br>力保不失</b></dd>
+                </dl>
+                <div class="fr">
+                    <p class="color-white fs-27 title"><b>国际物流APP在手</b></p>
+                    <p class="color-white fs-15">随时随地，轻松查单、下单、上传证件</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+	<div class="foottop">
+		<div class="wrapper">
+			<ul class="clearfix ta-c">
+				<li>
+					<a href="faq.html" class="fs-16 link-2"><i class="icon-list3 va-m icon-1"></i><b>常见问题</b></a>
+
+				</li>
+				<li>
+					<a href="about.html" class="fs-16 link-2"><i class="icon-list3 va-m icon-2"></i><b>关于我们</b></a>
+				</li>
+				<li>
+					<a href="contact.html" class="fs-16 link-2"><i class="icon-list3 va-m icon-3"></i><b>联系我们</b></a>
+				</li>
+				<li>
+					<a href="job.html" class="fs-16 link-2"><i class="icon-list3 va-m icon-4"></i><b>人才计划</b></a>
+				</li>
+				<li>
+					<a href="partner.html" class="fs-16 link-2"><i class="icon-list3 va-m icon-5"></i><b>加盟合作</b></a>
+				</li>
+				<li>
+					<a href="javascript:;" class="fs-16 link-2"><i class="icon-6 va-m"></i><b>网站地图</b></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="footbottom">
+		<div class="wrapper">
+			<dl class="ta-c">
+				<dd class="fs-11 color-white">
+					<div class="title fs-16 ta-c">联系我们</div>
+					<p class="ta-l">电子邮箱：sales@arkexpress.com.au</p>
+					<p class="clearfix ta-l"><span class="fl">联系电话：</span><span class="fl">1300  275  999<br>+61 3 9008 8899</span></p>
+                 
+				</dd>
+				<dd><a class="footlogo" href="index.html"><img src="dist/images/footlogo.png"></a></dd>
+				<dd>
+					<div class="title fs-16 color-white ta-c">合作伙伴</div>
+				</dd>
+			</dl>
+			<div class="copyright ta-c color-white fs-12">Copyright © 2017 arkexpress All Rights Reserved</div>
+		</div>
+	</div>
+</footer>
+<nav class="quenav ind-que">
+	<ul class="color-white ta-c fs-12">
+		<li><a href="" class="color-8"><b>订单<br>查询</b></a></li>
+		<li><a href=""><b>在线<br>下单</b></a></li>
+		<li><a href=""><b>微信号</b></a></li>
+		<li><a href=""><b>客服<br>QQ</b></a></li>
+		<li><a href="assist.html"><b>帮助<br>中心</b></a></li>
+	</ul>
+</nav>
+<script type="text/javascript">
+    var js_path = '';
+</script>
+<script type="text/javascript" src="dist/all.min.js"></script>
+<script type="text/javascript">
+	$(".select-style1 select").change(function() {
+		var _val = $(this).val();
+		$(this).siblings(".select-val").addClass("active").find("span").text(_val);
+	})
+</script>
+</body>
+</html>

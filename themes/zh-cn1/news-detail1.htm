@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+	<{include file='part-head.htm'}>
+</head>
+<body>
+<{include file='part-header.htm'}>
+<section class="inbanner bg-img" style="background-image: url(<{$SKIN_PATH}>dist/images/inbanner1.jpg)">
+</section>
+<section class="news container">
+	<div class="conbg"></div>
+	<div class="wrapper">
+		<section class="news-detail">
+			<{if $info.imageUrl}><div class="imgbox ta-c"><img src="<{$UPLOAD_PATH}><{$info.imageUrl}>" alt=""></div><{/if}>
+			<div class="articlebox color-11">
+				<div class="clearfix arttitle">
+					<div class="title fl color-9 fs-18"><b><{$info.title}></b></div>
+					<time class="fr">发布日期：<{$info.publishedDate}></time>
+				</div>
+				<article class="article">
+			     <{$info.content}>
+					<div class="clearfix">
+						<div class="artlogo ta-r fr"><img src="<{$SKIN_PATH}>dist/images/logo.png"><br><b>敬上</b></div>
+					</div>
+				</article>
+			</div>
+
+		</section>
+	</div>
+</section>
+<{include file='part-footperson.htm'}>
+<{include file='part-footer.htm'}>
+</body>
+</html>

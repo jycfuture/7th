@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+	<{include file='part-head.htm'}>
+</head>
+<body>
+<{include file='part-header.htm'}>
+<section class="inbanner bg-img" style="background-image: url(<{$SKIN_PATH}>dist/images/inbanner1.jpg)">
+</section>
+<section class="service container">
+	<div class="conbg"></div>
+	<div class="wrapper">
+		<div class="inTitle color-9 fs-18"><b>运单背书说明(承运条款)</b></div>
+		<div class="clearfix service-4">
+			<aside class="Leftnav">
+				<ul class="ta-c color-11">
+					<{foreach from=$terms item=item key=k}>
+					<li class="<{if $k==0}>active<{/if}>" data="<{$k+1}>"><a href="javascript:;"><i class="icon"></i><{$item.title}></a></li>
+					<{/foreach}>
+				</ul>
+			</aside>
+			<nav class="bd-box">
+				<dl>
+					<{foreach from=$terms item=item key=k}>
+					<dd>
+						<a href="" name="<{$k+1}>"></a>
+						<div class="title fs-20 color-12"><b><{$item.title}></b></div>
+						<article class="info fs-14 color-11">
+							<{$item.content}>
+						</article>
+					</dd>
+					<{/foreach}>
+				</dl>
+			</nav>
+		</div>
+		<div class="servicetip fs-16 color-10 ta-c"><b>如有任何疑问，请致电我们1300 （ARK）275 999、发邮件至 info@arkexpress.com.au</b></div>
+	</div>
+</section>
+<{include file='part-footperson.htm'}>
+<{include file='part-footer.htm'}>
+<script type="text/javascript">
+//左侧滚动
+var _wintop = $(window).scrollTop();
+var _scrollbox = $(".service-4").offset().top;
+var _box1 = $(".bd-box a[name=1]").offset().top-20;
+var _box2 = $(".bd-box a[name=2]").offset().top-20;
+var _box3 = $(".bd-box a[name=3]").offset().top-20;
+var _box4 = $(".bd-box a[name=4]").offset().top-20;
+var _box5 = $(".bd-box a[name=5]").offset().top-20;
+
+if(_wintop>_scrollbox){
+	$(".service-4 .Leftnav").addClass("active");
+}
+else{
+	$(".service-4 .Leftnav").removeClass("active");
+}
+//滚动监测位置
+$(window).scroll(function() {
+	_wintop = $(window).scrollTop();
+	if(_wintop>_scrollbox){
+		$(".service-4 .Leftnav").addClass("active");
+	}
+	else{
+		$(".service-4 .Leftnav").removeClass("active");
+	}
+	if(_wintop >= _box1 && _wintop < _box2){
+		$(".Leftnav li[data=1]").addClass("active").siblings().removeClass("active");
+	}
+	else if(_wintop >= _box2 && _wintop < _box3){
+		$(".Leftnav li[data=2]").addClass("active").siblings().removeClass("active");
+	}
+	else if(_wintop >= _box3 && _wintop < _box4){
+		$(".Leftnav li[data=3]").addClass("active").siblings().removeClass("active");
+	}
+	else if(_wintop >= _box4 && _wintop < _box5){
+		$(".Leftnav li[data=4]").addClass("active").siblings().removeClass("active");
+	}
+	else if(_wintop >= _box5){
+		$(".Leftnav li[data=5]").addClass("active").siblings().removeClass("active");
+	}
+});
+//点击滚动相应位置
+$(".Leftnav li").each(function(i) {
+	$(this).click(function() {
+		$(this).addClass("active").siblings().removeClass("active");
+		var itop = $(".bd-box dd").eq(i).find("a").offset().top-10;
+		$("html,body").stop().animate({"scrollTop":itop}, 500);
+	})
+})
+</script>
+</body>
+</html>

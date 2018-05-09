@@ -1,0 +1,67 @@
+<header class="header <{if $menu=='default'}>indheader<{/if}>">
+    <div class="wrapper clearfix">
+        <div class="topbar pt25 color-white clearfix">
+            <div class="fr">
+                <div class="country fl mr25 fs-17">
+                    <div class="icon fl mr25"><img src="<{$SKIN_PATH}>dist/images/topico1.png" class="mr5"><{$time1}> </div>
+                    <div class="icon fl mr25"><img src="<{$SKIN_PATH}>dist/images/topico2.png" class="mr5"><{$time}> </div>
+                </div>
+                <div class="price fs-16 fl shandow-style1"><span>1 EUR = <{$configs.rate}> CNY</span></div>
+            </div>
+        </div>
+        <div class="clearfix">
+            <a class="logo fl" href="index.html"><img src="<{$SKIN_PATH}>dist/images/logo.png"></a>
+            <nav class="fr topnav">
+                <ul class="fl color-white pr40 fs-14">
+                    <li class="fl <{if $menu=='default'}>active<{/if}>">
+                        <a href="<{$http_root_www}>" class="navA">首页</a>
+                    </li>
+                    <li class="fl">
+                        <a href="" class="navA">在线下单</a>
+                    </li>
+                    <li class="fl">
+                        <a href="" class="navA">包裹追踪</a>
+                    </li>
+                    <li class="fl">
+                        <a href="" class="navA">上传证件</a>
+                    </li>
+                    <li class="fl">
+                        <a href="" class="navA">APP下载</a>
+                    </li>
+                    <li class="fl <{if $baseCategory.alias=='news'}>active<{/if}>">
+                        <a href="<{$http_root_www}>news1" class="navA ">公告通知</a>
+                        <dl class="fs-12 ta-c">
+                            <dd><a href="<{$http_root_www}>news1">新闻公告</a></dd>
+                            <dd><a href="<{$http_root_www}>insurance">保险理赔</a></dd>
+                            <dd><a href="<{$http_root_www}>disclaimer">免责申明</a></dd>
+                        </dl>
+                    </li>
+                    <li class="fl <{if $baseCategory.alias=='service1'}>active<{/if}>" >
+                        <a href="" class="navA">服务指南</a>
+                        <dl class="fs-12 ta-c">
+                            <dd><a href="<{$http_root_www}>faqs">FAQ</a></dd>
+                            <dd><a href="<{$http_root_www}>price">线路价格</a></dd>
+                            <dd><a href="<{$http_root_www}>guide">下单指南</a></dd>
+                            <dd><a href="<{$http_root_www}>service">服务网点</a></dd>
+                            <dd><a href="<{$http_root_www}>domicile">上门取货</a></dd>
+                        </dl>
+                    </li>
+                    <li class="fl <{if $baseCategory.alias=='about'}>active<{/if}>">
+                        <a href="<{$http_root_www}>about" class="navA">关于我们</a>
+                        <dl class="fs-12 ta-c">
+                            <dd><a href="<{$http_root_www}>contact">联系我们</a></dd>
+                            <dd><a href="<{$http_root_www}>about">公司介绍</a></dd>
+                            <dd><a href="<{$http_root_www}>partner">合作伙伴</a></dd>
+                            <dd><a href="<{$http_root_www}>join">加盟合作</a></dd>
+                        </dl>
+                    </li>
+                </ul>
+                <div class="log-rgt fl">
+                    <a href="" class="loginbtn btn-style1 mr15">登录</a>
+                    <a href="" class="rgeistbtn btn-style2"><span>注册</span></a>
+                </div>
+            </nav>
+        </div>
+
+    </div>
+</header>

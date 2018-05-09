@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'CoutureBold';
+    src: url('CoutureBold/CoutureBold.eot');
+    src: url('CoutureBold/CoutureBold.eot') format('embedded-opentype'),
+         url('CoutureBold/CoutureBold.woff2') format('woff2'),
+         url('CoutureBold/CoutureBold.woff') format('woff'),
+         url('CoutureBold/CoutureBold.ttf') format('truetype'),
+         url('CoutureBold/CoutureBold.svg#CoutureBold') format('svg');
+}
+@font-face {
+    font-family: 'Yantramanav';
+    src: url('Yantramanav/Yantramanav.eot');
+    src: url('Yantramanav/Yantramanav.eot') format('embedded-opentype'),
+         url('Yantramanav/Yantramanav.woff2') format('woff2'),
+         url('Yantramanav/Yantramanav.woff') format('woff'),
+         url('Yantramanav/Yantramanav.ttf') format('truetype'),
+         url('Yantramanav/Yantramanav.svg#Yantramanav') format('svg');
+}
+@font-face {
+    font-family: 'yantramanavblack';
+    src: url('yantramanavblack/yantramanavblack.eot');
+    src: url('yantramanavblack/yantramanavblack.eot') format('embedded-opentype'),
+         url('yantramanavblack/yantramanavblack.woff2') format('woff2'),
+         url('yantramanavblack/yantramanavblack.woff') format('woff'),
+         url('yantramanavblack/yantramanavblack.ttf') format('truetype'),
+         url('yantramanavblack/yantramanavblack.svg#yantramanavblack') format('svg');
+}
+@font-face {
+    font-family: 'YantramanavBold';
+    src: url('YantramanavBold/YantramanavBold.eot');
+    src: url('YantramanavBold/YantramanavBold.eot') format('embedded-opentype'),
+         url('YantramanavBold/YantramanavBold.woff2') format('woff2'),
+         url('YantramanavBold/YantramanavBold.woff') format('woff'),
+         url('YantramanavBold/YantramanavBold.ttf') format('truetype'),
+         url('YantramanavBold/YantramanavBold.svg#YantramanavBold') format('svg');
+}

@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+	<{include file='part-head.htm'}>
+</head>
+<body>
+<{include file='part-header.htm'}>
+<section class="conntainer bg-img pt100 pb145">
+	<div class="wrapper">
+		<div class="conbox">
+			<div class="intitle fs-18 color-white"><b><{$classname}></b></div>
+			<div class="newslist pt15 pb60 pr70 pl40">
+				<nav class="scroll-bd">
+					<ul>
+						<{foreach from=$news item=item}>
+						<li class="clearfix fs-16"><a href="<{$http_root_www}>news/<{$item.id}>"><{$item.title}></a><time class="fs-14">发布日期：<{$item.publishedDate}></time></li>
+						<{/foreach}>
+					</ul>
+				</nav>
+					
+			</div>
+		</div>
+	</div>
+</section>
+<{include file='part-footer.htm'}>
+</body>
+</html>

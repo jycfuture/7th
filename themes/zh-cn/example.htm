@@ -1,0 +1,397 @@
+<!doctype html>
+<html>
+<head>
+<title>New Project</title>
+<meta content="" name="keywords">
+<meta content="" name="description">
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=1">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" />
+<meta content="telephone=no" name="format-detection" />
+<meta content="email=no" name="format-detection" />
+
+<link href="favicon.ico" mce_href="/favicon.ico" rel="bookmark" type="image/x-icon" />
+<link href="favicon.ico" mce_href="/favicon.ico" rel="icon" type="image/x-icon" />
+<link href="favicon.ico" mce_href="/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="dist/font-awesome-4.6.3/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="dist/fonts/fonts.css" />
+<link rel="stylesheet" type="text/css" href="dist/font-en.min.css" />
+<link rel="stylesheet" type="text/css" href="dist/libs.min.css" />
+<link rel="stylesheet" type="text/css" href="dist/layout.min.css" />
+<link rel="stylesheet" type="text/css" href="dist/desktop.min.css" />
+<link rel="stylesheet" type="text/css" href="dist/responsive.min.css" />
+<script type="text/javascript" src="dist/jquery-1.10.2.min.js"></script>
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<!--[if lt IE 9]><script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script><![endif]-->
+</head>
+<body class="p30">
+
+<h2 class="fs-20 mb20 color-warning mt50">Tip弹框</h2>
+<div class="mb30">
+<pre><code class="javascript">
+	// 所有配置项：
+	legendLayer.tipPop({
+		// 弹窗进出的效果，参照animate.css, 下面为默认值
+		animateIn: 'flipInX',
+		animateOut: 'flipOutX',
+		
+		// status 有四种状态： error, success, warning, info
+		status: 'error',
+
+		// content 填写文字，或者html，或者id
+		content: '#content1',
+
+		// hide 自动关闭, 默认为false
+		// example 2 中有关闭提示功能
+		hide: '3000',
+
+		// iniCallBack 初始化的回调函数
+		initCallBack: function(layer, layerDom){
+
+			// 返回当前弹窗这个对象
+			console.log(layer);
+
+			// 返回当前弹窗这个dom
+			console.log(layerDom);
+
+			alert('初始化回调函数');
+		},
+				
+		// closeCallBack 关闭前的回调函数，默认为 false。
+		closeBeforeCallBack: function(layer, layerDom){
+
+			// 如果使用了 关闭前的回调函数，那么点击关闭按钮 是无法关闭的。而且定义的自动关闭（hide）也会失效，因此需要要调用layer.destory()进行手动关闭窗口
+			alert('关闭前回调函数');
+
+			// 手动关闭窗口
+			layer.destory();
+		},
+
+		// closeCallBack 关闭后的回调函数
+		closeAfterCallBack: function(layer, layerDom){
+			alert('关闭后回调函数');
+		}
+	});
+</code></pre>
+</div>
+
+<div class="clearfix">
+	<div class="tip1 mr10 btn btn-danger btn-md btn-pill">example 1</div>
+	<div class="tip2 mr10 btn btn-warning btn-md btn-pill">example 2</div>
+	<div class="tip3 mr10 btn btn-success btn-md btn-pill">example 3</div>
+	<div class="tip4 mr10 btn btn-info btn-md btn-pill">example 4</div>
+</div>
+
+
+
+<h2 class="fs-20 mb20 color-warning mt50">Alert弹窗</h2>
+<div class="mb30">
+<pre><code class="javascript">
+	// 所有配置项：
+	legendLayer.alertPop({
+		// 弹窗进出的效果，参照animate.css, 下面为默认值
+		animateIn: 'flipInX',
+		animateOut: 'flipOutX',
+		
+		// 标题
+		title: '标题',
+
+		// content 填写文字，或者html，或者id
+		content: '#content1',
+
+		// 按钮数组，为了可以随意使用各种样式的按钮，按钮要按照下面的写法。可以直接复制当前站点中按钮html代码
+		btns: [
+			'&lt;div class="btn btn-success btn-md btn-pill"&gt;YES&lt;/div&gt;',
+			'&lt;div class="btn btn-warning btn-md btn-pill"&gt;NO&lt;/div&gt;'
+		],
+		
+		// 按钮回调函数，需要与按钮一一对应
+		btnsCallBack : [
+			function(layer, layerDom, layerBtnDom){},
+			function(layer, layerDom, layerBtnDom){}
+		],
+
+		// iniCallBack 初始化的回调函数
+		initCallBack: function(layer, layerDom, layerBtnsDom){
+
+			// 返回当前弹窗这个对象
+			console.log(layer);
+
+			// 返回当前弹窗这个dom
+			console.log(layerDom);
+
+			// 返回当前所有按钮dom
+			console.log(layerBtnsDom);
+
+			alert('初始化回调函数');
+		},
+				
+		// closeCallBack 关闭前的回调函数，默认为 false。
+		closeBeforeCallBack: function(layer, layerDom){
+
+			// 如果使用了 关闭前的回调函数，那么点击关闭按钮 是无法关闭的，因此需要要调用layer.destory()进行手动关闭窗口
+			alert('关闭前回调函数');
+
+			// 手动关闭窗口
+			layer.destory();
+		},
+
+		// closeCallBack 关闭后的回调函数
+		closeAfterCallBack: function(layer, layerDom){
+			alert('关闭后回调函数');
+		}
+	});
+</code></pre>
+</div>
+<div class="clearfix">
+	<div class="alert1 mr10 btn btn-danger btn-md btn-pill">example 1</div>
+	<div class="alert2 mr10 btn btn-warning btn-md btn-pill">example 2</div>
+</div>
+
+
+
+<h2 class="fs-20 mb20 color-warning mt50">Load弹框</h2>
+<div class="mb30">
+<pre><code class="javascript">
+	// 所有配置项：
+	legendLayer.loadPop({
+		// 弹窗进出的效果，参照animate.css, 下面为默认值
+		animateIn: 'fadeIn',
+		animateOut: 'fadeOut',
+
+		// 大小
+		width: '150px',
+		height: '150px',
+		
+		// status 有五种状态： 空， error, success, warning, info
+		status: '',
+
+		// content 填写文字，或者html，或者id
+		content: '案例',
+
+		// hide 自动关闭, 默认为false
+		hide: '3000',
+
+		// iniCallBack 初始化的回调函数
+		initCallBack: function(layer, layerDom){
+
+			// 返回当前弹窗这个对象
+			console.log(layer);
+
+			// 返回当前弹窗这个dom
+			console.log(layerDom);
+
+			alert('初始化回调函数');
+		},
+
+		// closeCallBack 关闭后的回调函数
+		closeAfterCallBack: function(layer, layerDom){
+			alert('关闭后回调函数');
+		}
+	});
+</code></pre>
+</div>
+
+<div class="clearfix">
+	<div class="load1 mr10 btn btn-danger btn-md btn-pill">example 1</div>
+	<div class="load2 mr10 btn btn-warning btn-md btn-pill">example 2</div>
+	<div class="load3 mr10 btn btn-success btn-md btn-pill">example 3</div>
+</div>
+
+
+<div class="hidden">
+	<div id="content1">example 1</div>
+	<div id="content2">example 2</div>
+	<div id="content3">
+		<div class="row clearfix">
+			<select name="" id="" style="width:100%;">
+				<option value="">下拉菜单一</option>
+				<option value="">下拉菜单二</option>
+			</select>
+		</div>
+		<div class="row clearfix">
+			<input type="text">
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+	var js_path = '';
+</script>
+<script type="text/javascript" src="dist/libs.min.js"></script>
+<script type="text/javascript" src="dist/web.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('pre code').each(function(i, block) {
+			hljs.highlightBlock(block);
+		});
+	});
+
+	$('.tip1').bind('click', function(){
+		legendLayer.tipPop({
+			status: 'error',
+			content: 'example 1',
+			initCallBack: function(layer, layerDom){
+				alert('初始化回调函数');
+			},
+			// closeCallBack 关闭后 回调函数
+			closeAfterCallBack: function(layer, layerDom){
+				alert('关闭后回调函数');
+			}
+		});
+	});
+	$('.tip2').bind('click', function(){
+		legendLayer.tipPop({
+			status: 'warning',
+			content: 'example 2',
+			hide: '10000',
+			initCallBack: function(layer, layerDom){
+				// 自动关闭提示
+				var time = 0;
+				var allTime = parseInt(layer.settings.hide);
+				var updateTime = function(time){
+					$(layerDom).find('.layer-hide').html( ((allTime - time) / 1000) +' S 后将自动关闭！');
+				}
+				updateTime(time);
+
+				var timer = setInterval(function(){
+					time += 1000;
+					if(time > allTime){
+						clearInterval(timer);
+						timer = null;
+						return false;
+					}
+					updateTime(time);
+				}, 1000);
+			}
+		});
+	});
+	$('.tip3').bind('click', function(){
+		legendLayer.tipPop({
+			status: 'success',
+			content: 'example 3',
+			closeBeforeCallBack: function(layer, layerDom){
+				alert('关闭前回调函数');
+				layer.destory();
+			},
+		});
+	});
+	$('.tip4').bind('click', function(){
+		legendLayer.tipPop({
+			status: 'info',
+			content: 'example 4 关闭可弹出第二个窗口',
+			closeAfterCallBack: function(layer, layerDom){
+				// 第二次调用 tipPop
+				legendLayer.tipPop({
+					animateIn: 'fadeIn',
+					animateOut: 'fadeOut',
+					status: 'success',
+					content: 'example 4-2 我是第二个窗口'
+				});
+			},
+		});
+	});
+
+
+	$('.alert1').bind('click', function(){
+		legendLayer.alertPop({
+			title: 'Add New Address',
+			content: 'Message goes here.',
+			btns: [
+				'<div class="btn btn-success btn-md btn-pill">YES</div>',
+				'<div class="btn btn-info btn-md btn-pill">NO</div>'
+			],
+			btnsCallBack: [
+				function(layer, layerDom, layerBtnDom){
+					legendLayer.tipPop({
+						status: 'success',
+						content: '<div class="ta-c">你点击了YES 弹出了tipPop</div>',
+						initCallBack: function(layer, layerDom){
+							console.log(layer);
+						}
+					});
+				},
+				function(layer, layerDom, layerBtnDom){
+					layer.destory();
+					
+					legendLayer.tipPop({
+						status: 'danger',
+						content: '<div class="ta-c">你点击了NO 弹出了tipPop，并且关闭前一个弹窗</div>',
+						initCallBack: function(layer, layerDom){
+							console.log(layer);
+						}
+					});
+				}
+			],
+			initCallBack: function(layer, layerDom, layerBtnDom){
+				console.log(layerBtnDom);
+				$(layerDom).find('.layer-content').html('初始化后，改了当前的内容');
+			}
+		});
+	});
+
+
+	$('.alert2').bind('click', function(){
+		legendLayer.alertPop({
+			title: 'Add New Address',
+			content: '#content3',
+			btns: [
+				'<div class="btn btn-success btn-md btn-pill">YES</div>',
+				'<div class="btn btn-info btn-md btn-pill">NO</div>',
+				'<div class="btn btn-danger btn-md btn-pill">CANCLE</div>',
+			],
+			btnsCallBack: [
+				function(layer, layerDom, layerBtnDom){
+					console.log(layerBtnDom);
+				},
+				function(layer, layerDom, layerBtnDom){
+					console.log(layerBtnDom);
+				},
+				function(layer, layerDom, layerBtnDom){
+					console.log(layerBtnDom);
+				}
+			],
+			initCallBack: function(layer, layerDom, layerBtnDom){
+				// 对下拉框初始化
+				$(layerDom).find('select').select2();
+				$(layerDom).find('input').val('表单赋值');
+
+				// 点击第一个按钮获取input的值
+				$(layerBtnDom).eq(0).bind('click', function(){
+					alert($(layerDom).find('input').val());
+				})
+			}
+		});
+	});
+
+	
+	$('.load1').bind('click', function(){
+		legendLayer.loadPop({
+			hide: '3000',
+			status: 'default'
+		});
+	});
+	$('.load2').bind('click', function(){
+		legendLayer.loadPop({
+			width: '100px',
+			height: '100px',
+			status: 'error',
+        	content: '错误',
+			hide: '1000',
+		});
+	});
+	$('.load3').bind('click', function(){
+		legendLayer.loadPop({
+			hide: '3000',
+			status: 'success',
+			content: '已完成',
+		});
+	});
+</script>
+</body>
+</html>

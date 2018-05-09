@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+	<{include file='part-head.htm'}>
+</head>
+<body>
+<{include file='part-header.htm'}>
+<section class="inbanner bg-img" style="background-image: url(<{$SKIN_PATH}>dist/images/faq.jpg)">
+</section>
+<section class="faq container">
+	<div class="wrapper">
+		<div class="inTitle color-9 fs-18"><b>常见问题</b></div>
+		<nav class="faqlist color-11">
+			<ul>
+				<{foreach from=$faqs item=item key=k}>
+				<li>
+					<a href="javascript:;" class="fs-16"><{$item.title}></a>
+					<div class="info">
+						<{$item.content}>
+					</div>
+				</li>
+				<{/foreach}>
+			</ul>
+		</nav>
+	</div>
+</section>
+<{include file='part-footperson.htm'}>
+<{include file='part-footer.htm'}>
+<script type="text/javascript">
+	$(".faqlist li").each(function() {
+		$(this).find('a').click(function() {
+			$(this).parent().toggleClass("active").siblings().removeClass('active');
+		})
+	});
+</script>
+</body>
+</html>

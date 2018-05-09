@@ -1,0 +1,36 @@
+<header class="header">
+    <div class="topBar bg-color1 clearfix">
+        <div class="left fl color-white fs-16">
+            <div class="fl email mr60"><i class="icon"></i><span>sales@arkexpress.com.au</span></div>
+            <div class="fl phone"><i class="icon"></i><span>全澳统一客服热线: 1300 275 (ARK) 999</span></div>
+        </div>
+        <div class="right fr color-white fs-20">
+            <div class="time fl color-white fs-16 mr60">
+                <span class="time1 fl pl35 mr25"><{$time1}></span>
+                <span class="time2 fl pl35"><{$time}></span>
+            </div>
+            <div class="btns fl mr30 pt15">
+                <a href="http://www.arkexpress.com.au/cgi-bin/GInfo.dll?Login" class="btn w100 color-white fl fs-12 ta-c btn-style1 mr20">登录 </a>
+                <a href="http://www.arkexpress.com.au/cgi-bin/GInfo.dll?DispInfo&w=arkexpress&nid=16" class="btn w100 color-white fl fs-12 ta-c btn-style2">注册</a>
+
+            </div>
+            <div class="price mt15 fl ta-c w195 color-white fs-12">1 AUD = <{$configs.rate}>CNY</div>
+        </div>
+    </div>
+    <div class="topcon">
+        <div class="wrapper clearfix">
+            <a class="logo fl" href="index.html"><img src="<{$SKIN_PATH}>dist/images/logo.png"></a>
+            <ul class="fr ta-c fs-16 nav">
+                <li class="fl <{if $menu=='default'}> active<{/if}>"><a href="<{$http_root_www}>">首页</a></li>
+                <li class="fl <{if $baseCategory.alias=='service'}> active<{/if}>"><a href="<{$http_root_www}>service">服务指南</a></li>
+                <li class="fl <{if $baseCategory.alias=='news'}> active<{/if}>"><a href="<{$http_root_www}>news">公告通知</a></li>
+                <li class="fl <{if $baseCategory.alias=='help'}> active<{/if}>"><a href="http://www.arkexpress.com.au/cgi-bin/GInfo.dll?Login" target="_blank">自助平台</a></li>
+                <li class="fl <{if $baseCategory.alias=='find'}> active<{/if}>"><a href="<{$http_root_www}>find">网点查询</a></li>
+                <li class="fl <{if $baseCategory.alias=='partner'}> active<{/if}>"><a href="<{$http_root_www}>partner">加盟投资</a></li>
+                <li class="fl <{if $baseCategory.alias=='city'}> active<{/if}>"><a href="<{$http_root_www}>city">城市分站</a></li>
+                <li class="fl <{if $baseCategory.alias=='about'}> active<{/if}>"><a href="<{$http_root_www}>about">关于我们</a></li>
+            </ul>
+            <a href="javascript:;" class="btn-style3 w220 ta-c color-white fs-20 fl"><span>在线下单</span></a>
+        </div>
+    </div>
+</header>

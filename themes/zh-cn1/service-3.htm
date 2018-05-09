@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+	<{include file='part-head.htm'}>
+</head>
+<body>
+<{include file='part-header.htm'}>
+<section class="inbanner bg-img" style="background-image: url(<{$SKIN_PATH}>dist/images/inbanner1.jpg)">
+</section>
+<section class="service container">
+	<div class="conbg"></div>
+	<div class="wrapper">
+		<div class="inTitle color-9 fs-18"><b>扣件原因分析</b></div>
+		<nav class="newslist color-11">
+			<ul>
+				<{foreach from=$reasons item=item}>
+				<li>
+					<i class="icon"></i>
+					<a href="<{$http_root_www}>news/<{$item.id}>" class="clearfix">
+						<span class="fl"><{$item.title}></span>
+						<time class="fr"><{$item.publishedDate}></time>
+					</a>
+				</li>
+				<{/foreach}>
+			</ul>
+		</nav>
+	</div>
+</section>
+<{include file='part-footperson.htm'}>
+
+<{include file='part-footer.htm'}>
+</body>
+</html>

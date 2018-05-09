@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+    <{include file='part-head.htm'}>
+</head>
+<body>
+<{include file='part-header.htm'}>
+<section class="inbanner bg-img" style="background-image: url(<{$SKIN_PATH}>dist/images/inbanner1.jpg)">
+</section>
+<section class="service container">
+	<div class="conbg"></div>
+	<div class="wrapper">
+		<div class="inTitle color-9 fs-18"><b>资料下载中心</b></div>
+		<nav class="downlist">
+			<ul>
+				<{foreach from=$download item=item}>
+				<li>
+					<a href="<{$UPLOAD_PATH}><{$item.files}>">
+						<{$item.title}>
+					</a>
+				</li>
+				<{/foreach}>
+			</ul>
+		</nav>
+	</div>
+</section>
+<{include file='part-footperson.htm'}>
+<{include file='part-footer.htm'}>
+</body>
+</html>

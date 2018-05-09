@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <{include file='part-head.htm'}>
+</head>
+<body>
+    
+    <!-- 头部 -->
+    <{include file='part-header.htm'}>
+    <!-- 头部 end-->
+    <!-- 主内容 -->
+    <div id="bd" class="contact">
+        <div class="wp clearfix">
+			<div class="contact-left">
+				<div class="contact-address">
+					<div class="hd-01">
+						<h2>联系我们</h2>
+						<div class="line-01"></div>
+						<div class="clear"></div>
+					</div>
+					<address>
+						<p class="clearfix">
+							<i><img src="<{$SKIN_PATH}>dist/images/icon-3.png" /></i>
+							<span>电子邮箱：sales@arkexpress.com.au</span>
+						</p>
+						<p class="clearfix">
+							<i><img src="<{$SKIN_PATH}>dist/images/icon-4.png" /></i>
+							<span>联系电话：1300 275 999 +61 3 9008 8899</span>
+						</p>
+					</address>
+				</div>
+			</div>
+			<div class="contact-right">
+				<div class="contact-form">
+					<div class="hd-01">
+						<h2>客户留言</h2>
+						<div class="line-01"></div>
+						<div class="clear"></div>
+					</div>
+					<form class="inquire contact-form-form" method="post">
+						<div class="row">
+							<input type="text" name="name" placeholder="姓名" class="contact-input fs-14" />
+						</div>
+						<div class="row">
+							<input type="tel" name="phone" placeholder="电话" class="contact-input fs-14" />
+						</div>
+						<div class="row">
+							<input type="email" name='email' placeholder="邮件" class="contact-input fs-14" />
+						</div>
+						<div class="row">
+							<textarea placeholder="留言" name="message" class="contact-textarea fs-14"></textarea>
+						</div>
+						<div class="row">
+							<button  id="submit" class="contact-submit">提交</button>
+							<div class="clear"></div>
+						</div>
+					</form>
+				</div>
+			</div>
+        </div>
+    </div>
+    <!-- 主内容 end-->
+    <{include file='part-footperson.htm'}>
+    <{include file='part-footer.htm'}>
+    <style>
+        .response{display:none;text-align: left;color: red;}
+    </style>
+    <script>
+        $('.inquire').submit(function(){
+            console.log(12);
+            var _form = $(this);
+            var _action = '<{$http_root_www}>inquire.php';
+            _form.find('.response').remove();
+            _form.find('#submit').before('<p class="response">发送中...</p>');
+            _form.find(".response").css('display','block');
+            var form = _form.get(0);
+            _form.find('#submit').attr('disabled', true);
+
+            $.post(_action, {
+                name: form.name.value,
+                email: form.email.value,
+                phone: form.phone.value,
+                message: form.message.value,
+                type:1
+            }, function(data){
+                _form.find('.response').remove();
+                if (data=='1') {
+                    $('.inquire')[0].reset();
+                    _form.find('#submit').before('<p class="response">消息已发出，我们会尽快联系您</p>');
+                    _form.find(".response").css('display','block');
+                    _form.find('#submit').attr('disabled', false);
+                }else{
+                    console.log(312);
+                    _form.find('#submit').before('<p class="response">'+data+'</p>');
+                    _form.find(".response").css('display','block');
+                    _form.find('#submit').attr('disabled', false);
+                }
+            });
+            return false;
+        });
+    </script>
+</body>
+</html>

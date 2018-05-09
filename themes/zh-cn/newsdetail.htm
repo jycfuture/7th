@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+	<{include file='part-head.htm'}>
+</head>
+<body>
+<{include file='part-header.htm'}>
+<section class="conntainer bg-img pt40 pb50">
+	<div class="wrapper">
+		<div class="conbox">
+			<div class="intitle fs-18 color-white clearfix"><b><{$info.title}></b><time class="fs-14 fr">发布日期：<{$info.publishedDate}></time></div>
+			<div class="newsdetail pt40 pb40 pr60 pl55">
+				<article class="scroll-bd article color-white fs-14">
+					<{$info.content}>
+				</article>
+				<div class="detailbtns ta-c mt50 pt15">
+					<a class="btn-style3 mr15 w210" href="<{$http_root_www}><{$class}>">返回列表页</a>
+					<a class="btn-style4 w210" href="<{$http_root_www}>">返回首页</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<{include file='part-footer.htm'}>
+</body>
+</html>

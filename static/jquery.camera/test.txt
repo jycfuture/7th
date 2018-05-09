@@ -1,0 +1,30 @@
+<div style="display:none;" id="fit-screen-data">
+	<{if $pics}>
+		<{foreach from=$pics item=item}>
+			<div data-thumb="<{$UPLOAD_PATH}><{$item.pic|image:120:120:'cut'}>" data-src="<{$UPLOAD_PATH}><{$item.pic}>"> </div>
+		<{/foreach}>
+	<{else}>
+		<div data-thumb="<{$UPLOAD_PATH}><{$project.imageUrl|image:120:120:'cut'}>" data-src="<{$UPLOAD_PATH}><{$project.imageUrl}>"> </div>
+	<{/if}>
+</div>
+<script src="<{$STATIC_PATH}>jquery.camera/jquery.mobile.customized.min.js"></script>
+<script src="<{$STATIC_PATH}>jquery.camera/jquery.easing.1.3.js"></script>
+<script src="<{$STATIC_PATH}>jquery.camera/jquery.camera.js"></script>
+<script>
+	$('.yz-slide2 .tools-fitscreen').click(function(){
+		$('body').append('<div id="fit-screen-box"><a class="close"><i></i><i></i></a><div>'+ $('#fit-screen-data').html() +'</div></div>');
+		$('#fit-screen-box > div').camera({
+			height: 'auto',
+			loader: 'bar',
+			pagination: false,
+			thumbnails: true,
+			hover: false,
+			opacityOnGrid: false,
+			pauseOnClick: false,
+			imagePath: 'images/'
+		});
+		$('#fit-screen-box .close').click(function(){
+			$('#fit-screen-box').fadeOut(100, function(){ $(this).remove(); });
+		});
+	});
+</script>

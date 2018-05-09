@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'Calibre_Black';
+    src: url('Calibre_Black/Calibre_Black.eot');
+    src: url('Calibre_Black/Calibre_Black.eot') format('embedded-opentype'),
+    url('Calibre_Black/Calibre_Black.woff2') format('woff2'),
+    url('Calibre_Black/Calibre_Black.woff') format('woff'),
+    url('Calibre_Black/Calibre_Black.ttf') format('truetype'),
+    url('Calibre_Black/Calibre_Black.svg#Calibre_Black') format('svg');
+}
+@font-face {
+    font-family: 'Calibre_Black_Italic';
+    src: url('Calibre_Black_Italic/Calibre_Black_Italic.eot');
+    src: url('Calibre_Black_Italic/Calibre_Black_Italic.eot') format('embedded-opentype'),
+    url('Calibre_Black_Italic/Calibre_Black_Italic.woff2') format('woff2'),
+    url('Calibre_Black_Italic/Calibre_Black_Italic.woff') format('woff'),
+    url('Calibre_Black_Italic/Calibre_Black_Italic.ttf') format('truetype'),
+    url('Calibre_Black_Italic/Calibre_Black_Italic.svg#Calibre_Black_Italic') format('svg');
+}
+@font-face {
+    font-family: 'Calibre_Bold';
+    src: url('Calibre_Bold/Calibre_Bold.eot');
+    src: url('Calibre_Bold/Calibre_Bold.eot') format('embedded-opentype'),
+    url('Calibre_Bold/Calibre_Bold.woff2') format('woff2'),
+    url('Calibre_Bold/Calibre_Bold.woff') format('woff'),
+    url('Calibre_Bold/Calibre_Bold.ttf') format('truetype'),
+    url('Calibre_Bold/Calibre_Bold.svg#Calibre_Bold') format('svg');
+}
+@font-face {
+    font-family: 'Calibre_Bold_Italic';
+    src: url('Calibre_Bold_Italic/Calibre_Bold_Italic.eot');
+    src: url('Calibre_Bold_Italic/Calibre_Bold_Italic.eot') format('embedded-opentype'),
+    url('Calibre_Bold_Italic/Calibre_Bold_Italic.woff2') format('woff2'),
+    url('Calibre_Bold_Italic/Calibre_Bold_Italic.woff') format('woff'),
+    url('Calibre_Bold_Italic/Calibre_Bold_Italic.ttf') format('truetype'),
+    url('Calibre_Bold_Italic/Calibre_Bold_Italic.svg#Calibre_Bold_Italic') format('svg');
+}
+@font-face {
+    font-family: 'Calibre_Light';
+    src: url('Calibre_Light/Calibre_Light.eot');
+    src: url('Calibre_Light/Calibre_Light.eot') format('embedded-opentype'),
+    url('Calibre_Light/Calibre_Light.woff2') format('woff2'),
+    url('Calibre_Light/Calibre_Light.woff') format('woff'),
+    url('Calibre_Light/Calibre_Light.ttf') format('truetype'),
+    url('Calibre_Light/Calibre_Light.svg#Calibre_Light') format('svg');
+}
+@font-face {
+    font-family: 'Calibre_Light_Italic';
+    src: url('Calibre_Light_Italic/Calibre_Light_Italic.eot');
+    src: url('Calibre_Light_Italic/Calibre_Light_Italic.eot') format('embedded-opentype'),
+    url('Calibre_Light_Italic/Calibre_Light_Italic.woff2') format('woff2'),
+    url('Calibre_Light_Italic/Calibre_Light_Italic.woff') format('woff'),
+    url('Calibre_Light_Italic/Calibre_Light_Italic.ttf') format('truetype'),
+    url('Calibre_Light_Italic/Calibre_Light_Italic.svg#Calibre_Light_Italic') format('svg');
+}
+@font-face {
+    font-family: 'Calibre_Medium';
+    src: url('Calibre_Medium/Calibre_Medium.eot');
+    src: url('Calibre_Medium/Calibre_Medium.eot') format('embedded-opentype'),
+    url('Calibre_Medium/Calibre_Medium.woff2') format('woff2'),
+    url('Calibre_Medium/Calibre_Medium.woff') format('woff'),
+    url('Calibre_Medium/Calibre_Medium.ttf') format('truetype'),
+    url('Calibre_Medium/Calibre_Medium.svg#Calibre_Medium') format('svg');
+}
+@font-face {
+    font-family: 'Calibre_Medium_Italic';
+    src: url('Calibre_Medium_Italic/Calibre_Medium_Italic.eot');
+    src: url('Calibre_Medium_Italic/Calibre_Medium_Italic.eot') format('embedded-opentype'),
+    url('Calibre_Medium_Italic/Calibre_Medium_Italic.woff2') format('woff2'),
+    url('Calibre_Medium_Italic/Calibre_Medium_Italic.woff') format('woff'),
+    url('Calibre_Medium_Italic/Calibre_Medium_Italic.ttf') format('truetype'),
+    url('Calibre_Medium_Italic/Calibre_Medium_Italic.svg#Calibre_Medium_Italic') format('svg');
+}
+@font-face {
+    font-family: 'Calibre_Regular';
+    src: url('Calibre_Regular/Calibre_Regular.eot');
+    src: url('Calibre_Regular/Calibre_Regular.eot') format('embedded-opentype'),
+    url('Calibre_Regular/Calibre_Regular.woff2') format('woff2'),
+    url('Calibre_Regular/Calibre_Regular.woff') format('woff'),
+    url('Calibre_Regular/Calibre_Regular.ttf') format('truetype'),
+    url('Calibre_Regular/Calibre_Regular.svg#Calibre_Regular') format('svg');
+}
+@font-face {
+    font-family: 'Calibre_Regular_Italic';
+    src: url('Calibre_Regular_Italic/Calibre_Regular_Italic.eot');
+    src: url('Calibre_Regular_Italic/Calibre_Regular_Italic.eot') format('embedded-opentype'),
+    url('Calibre_Regular_Italic/Calibre_Regular_Italic.woff2') format('woff2'),
+    url('Calibre_Regular_Italic/Calibre_Regular_Italic.woff') format('woff'),
+    url('Calibre_Regular_Italic/Calibre_Regular_Italic.ttf') format('truetype'),
+    url('Calibre_Regular_Italic/Calibre_Regular_Italic.svg#Calibre_Regular_Italic') format('svg');
+}
+@font-face {
+    font-family: 'Calibre_Semibold';
+    src: url('Calibre_Semibold/Calibre_Semibold.eot');
+    src: url('Calibre_Semibold/Calibre_Semibold.eot') format('embedded-opentype'),
+    url('Calibre_Semibold/Calibre_Semibold.woff2') format('woff2'),
+    url('Calibre_Semibold/Calibre_Semibold.woff') format('woff'),
+    url('Calibre_Semibold/Calibre_Semibold.ttf') format('truetype'),
+    url('Calibre_Semibold/Calibre_Semibold.svg#Calibre_Semibold') format('svg');
+}
+@font-face {
+    font-family: 'Calibre_Semibold_Italic';
+    src: url('Calibre_Semibold_Italic/Calibre_Semibold_Italic.eot');
+    src: url('Calibre_Semibold_Italic/Calibre_Semibold_Italic.eot') format('embedded-opentype'),
+    url('Calibre_Semibold_Italic/Calibre_Semibold_Italic.woff2') format('woff2'),
+    url('Calibre_Semibold_Italic/Calibre_Semibold_Italic.woff') format('woff'),
+    url('Calibre_Semibold_Italic/Calibre_Semibold_Italic.ttf') format('truetype'),
+    url('Calibre_Semibold_Italic/Calibre_Semibold_Italic.svg#Calibre_Semibold_Italic') format('svg');
+}
+@font-face {
+    font-family: 'Calibre_Thin';
+    src: url('Calibre_Thin/Calibre_Thin.eot');
+    src: url('Calibre_Thin/Calibre_Thin.eot') format('embedded-opentype'),
+    url('Calibre_Thin/Calibre_Thin.woff2') format('woff2'),
+    url('Calibre_Thin/Calibre_Thin.woff') format('woff'),
+    url('Calibre_Thin/Calibre_Thin.ttf') format('truetype'),
+    url('Calibre_Thin/Calibre_Thin.svg#Calibre_Thin') format('svg');
+}
+@font-face {
+    font-family: 'avenirnextregular';
+    src: url('avenirnextregular/avenirnextregular.eot');
+    src: url('avenirnextregular/avenirnextregular.eot') format('embedded-opentype'),
+    url('avenirnextregular/avenirnextregular.woff2') format('woff2'),
+    url('avenirnextregular/avenirnextregular.woff') format('woff'),
+    url('avenirnextregular/avenirnextregular.ttf') format('truetype'),
+    url('avenirnextregular/avenirnextregular.svg#avenirnextregular') format('svg');
+}
+@font-face {
+    font-family: 'SFNSTextRegular';
+    src: url('SFNSTextRegular/SFNSTextRegular.eot');
+    src: url('SFNSTextRegular/SFNSTextRegular.eot') format('embedded-opentype'),
+    url('SFNSTextRegular/SFNSTextRegular.woff2') format('woff2'),
+    url('SFNSTextRegular/SFNSTextRegular.woff') format('woff'),
+    url('SFNSTextRegular/SFNSTextRegular.ttf') format('truetype'),
+    url('SFNSTextRegular/SFNSTextRegular.svg#SFNSTextRegular') format('svg');
+}
+@font-face {
+    font-family: 'georgiab';
+    src: url('georgiab/georgiab.eot');
+    src: url('georgiab/georgiab.eot') format('embedded-opentype'),
+    url('georgiab/georgiab.woff2') format('woff2'),
+    url('georgiab/georgiab.woff') format('woff'),
+    url('georgiab/georgiab.ttf') format('truetype'),
+    url('georgiab/georgiab.svg#georgiab') format('svg');
+}
+
