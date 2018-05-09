@@ -13,7 +13,7 @@ define( 'ADMIN_EMAIL', '' );
 define( 'SITE_NAME', '' );
 
 //根目录
-define('BASE_DIR', '7th/');
+define('BASE_DIR', '');
 
 //针对IIS的Rewrite3，REQUEST_URI错误问题
 if ( isset( $_SERVER['HTTP_X_REWRITE_URL'] ) ) {
